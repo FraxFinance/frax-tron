@@ -19,6 +19,7 @@
   "author": "Frax Finance",
   "license": "ISC",
   "devDependencies": {
+    "trc20": "github:TRON-Developer-Hub/TRC20-Contract-Template",
     "@openzeppelin/contracts": "^5.0.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.3.0",
