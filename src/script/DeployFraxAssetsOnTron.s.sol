@@ -15,9 +15,12 @@ https://github.com/FraxFinance/fraxtal-contracts/blob/master/src/contracts/Fraxt
 
 With the exception of no bridge minter
 
+TODO:
+- differentiate owner, captain, firstOfficer, crewMember
+- assert wait periods are as wanted
 */
 
-contract DeployFraxOnTron is BaseScript {
+contract DeployFraxAssetsOnTron is BaseScript {
 
     address public frax;
     address public fraxFerry;
