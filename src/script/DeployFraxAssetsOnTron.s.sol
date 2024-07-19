@@ -5,7 +5,7 @@ import { BaseScript } from "frax-std/BaseScript.sol";
 import { console } from "frax-std/FraxTest.sol";
 import { FraxtalL2 } from "src/contracts/chain-constants/FraxtalL2.sol";
 
-import { ERC20PermitPermissionedOptiMintable} from "fraxtal-contracts/src/contracts/Fraxtal/universal/ERC20PermitPermissionedOptiMintable.sol";
+import { ERC20PermitPermissionedOptiMintable } from "fraxtal-contracts/src/contracts/Fraxtal/universal/ERC20PermitPermissionedOptiMintable.sol";
 import { FraxFerry } from "frax-contracts/src/hardhat/contracts/FraxFerry/FraxFerry.sol";
 
 /*
@@ -21,7 +21,6 @@ TODO:
 */
 
 contract DeployFraxAssetsOnTron is BaseScript {
-
     address public frax;
     address public fraxFerry;
     address public sFrax;
@@ -29,15 +28,12 @@ contract DeployFraxAssetsOnTron is BaseScript {
     address public fxs;
     address public fxsFerry;
 
-    uint256 public deployerPk;
-    address public deployerAddr;
     address public timelock;
 
     uint256 public constant TRON_CHAIN_ID = 1000;
 
     function setUp() public {
         // TODO
-
     }
 
     function run() public broadcaster {
@@ -45,21 +41,13 @@ contract DeployFraxAssetsOnTron is BaseScript {
     }
 
     function deployERC20sWithFerries() public {
-        (frax, fraxFerry) = deployERC20WithFerry({
-            _remoteToken: FraxtalL2.FRAX,
-            _name: "Frax",
-            _symbol: "FRAX"
-        });
+        (frax, fraxFerry) = deployERC20WithFerry({ _remoteToken: FraxtalL2.FRAX, _name: "Frax", _symbol: "FRAX" });
         (sFrax, sFraxFerry) = deployERC20WithFerry({
             _remoteToken: FraxtalL2.SFRAX,
             _name: "Staked Frax",
             _symbol: "sFRAX"
         });
-        (fxs, fxsFerry) = deployERC20WithFerry({
-            _remoteToken: FraxtalL2.FXS,
-            _name: "Frax Share",
-            _symbol: "FXS"
-        });
+        (fxs, fxsFerry) = deployERC20WithFerry({ _remoteToken: FraxtalL2.FXS, _name: "Frax Share", _symbol: "FXS" });
     }
 
     function deployErc20WithFerry(
@@ -68,7 +56,7 @@ contract DeployFraxAssetsOnTron is BaseScript {
         string memory _symbol
     ) public returns (address) {
         ERC20PermitPermissionedOptiMintable erc20 = new ERC20PermitPermissionedOptiMintable({
-            _creator_address: deployerAddr,
+            _creator_address: deployer,
             _timelock_address: timelock,
             _bridge: address(1), // unreachable addr
             _remoteToken: _remoteToken,

@@ -2,8 +2,7 @@
 pragma solidity ^0.8.19;
 
 import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import { ERC20PermitPermissionedOptiMintable} from "fraxtal-contracts/src/contracts/Fraxtal/universal/ERC20PermitPermissionedOptiMintable.sol";
-import { FraxFerry } from "frax-contracts/src/hardhat/contracts/FraxFerry/FraxFerry.sol";
+import { ERC20PermitPermissionedOptiMintable } from "fraxtal-contracts/src/contracts/Fraxtal/universal/ERC20PermitPermissionedOptiMintable.sol";
 
 contract Counter is ERC20 {
     uint256 public number;
