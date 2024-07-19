@@ -5,16 +5,12 @@ import { BaseScript } from "frax-std/BaseScript.sol";
 import { console } from "frax-std/FraxTest.sol";
 import { FraxtalL2 } from "src/contracts/chain-constants/FraxtalL2.sol";
 
-import { ERC20PermitPermissionedOptiMintable } from "fraxtal-contracts/src/contracts/Fraxtal/universal/ERC20PermitPermissionedOptiMintable.sol";
+import { ERC20WithMinters } from "src/contracts/ERC20WithMinters.sol";
 import { FraxFerry } from "frax-contracts/src/hardhat/contracts/FraxFerry/FraxFerry.sol";
 
 /*
 NOTICE:
-Deploy FRAX, sFRAX, and FXS on Tron using the same requirements as:
-https://github.com/FraxFinance/fraxtal-contracts/blob/master/src/contracts/Fraxtal/universal/ERC20PermitPermissionedOptiMintable.sol
-
-With the exception of no bridge minter
-
+Deploy FRAX, sFRAX, and FXS on Tron
 TODO:
 - differentiate owner, captain, firstOfficer, crewMember
 - assert wait periods are as wanted
@@ -31,10 +27,6 @@ contract DeployFraxAssetsOnTron is BaseScript {
     address public timelock;
 
     uint256 public constant TRON_CHAIN_ID = 1000;
-
-    function setUp() public {
-        // TODO
-    }
 
     function run() public broadcaster {
         deployERC20sWithFerries();
@@ -55,11 +47,9 @@ contract DeployFraxAssetsOnTron is BaseScript {
         string memory _name,
         string memory _symbol
     ) public returns (address) {
-        ERC20PermitPermissionedOptiMintable erc20 = new ERC20PermitPermissionedOptiMintable({
+        ERC20WithMinters erc20 = new ERC20WithMinters({
             _creator_address: deployer,
             _timelock_address: timelock,
-            _bridge: address(1), // unreachable addr
-            _remoteToken: _remoteToken,
             _name: _name,
             _symbol: _symbol
         });
@@ -69,6 +59,7 @@ contract DeployFraxAssetsOnTron is BaseScript {
             _targetToken: _remoteToken,
             _targetChain: FraxtalL2.CHAIN_ID
         });
+        ferry.nominateNewOwner(timelock);
 
         console.log(_symbol);
         console.log(address(erc20));
