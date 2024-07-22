@@ -6,7 +6,7 @@ import { console } from "frax-std/FraxTest.sol";
 import { FraxtalL2 } from "src/contracts/chain-constants/FraxtalL2.sol";
 
 import { ERC20WithMinters } from "src/contracts/ERC20WithMinters.sol";
-import { FraxFerry } from "frax-contracts/src/hardhat/contracts/FraxFerry/FraxFerry.sol";
+import { Fraxferry } from "frax-contracts/src/hardhat/contracts/Fraxferry/Fraxferry.sol";
 
 /*
 NOTICE:
@@ -53,7 +53,7 @@ contract DeployFraxAssetsOnTron is BaseScript {
             _name: _name,
             _symbol: _symbol
         });
-        FraxFerry ferry = new FraxFerry({
+        Fraxferry ferry = new Fraxferry({
             _token: address(erc20),
             _chainid: TRON_CHAIN_ID,
             _targetToken: _remoteToken,

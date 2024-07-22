@@ -6,7 +6,7 @@ import { console } from "frax-std/FraxTest.sol";
 import { FraxtalL2 } from "src/contracts/chain-constants/FraxtalL2.sol";
 
 import { ERC20WithMinters } from "src/contracts/ERC20WithMinters.sol";
-import { FraxFerry } from "frax-contracts/src/hardhat/contracts/FraxFerry/FraxFerry.sol";
+import { Fraxferry } from "frax-contracts/src/hardhat/contracts/Fraxferry/Fraxferry.sol";
 
 /*
 NOTICE:
@@ -40,7 +40,7 @@ contract DeployTronFerriesOnFraxtal is BaseScript {
     }
 
     function deployFerry(address _token, address _remoteToken) public returns (address) {
-        FraxFerry ferry = new FraxFerry({
+        Fraxferry ferry = new Fraxferry({
             _token: _token,
             _chainid: FraxtalL2.CHAIN_ID,
             _targetToken: _remoteToken,
