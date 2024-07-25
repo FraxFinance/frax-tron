@@ -7,6 +7,12 @@ settings:
 importers:
   .:
     dependencies:
+      "@noble/secp256k1":
+        specifier: ^2.1.0
+        version: 2.1.0
+      "@uniswap/v3-periphery":
+        specifier: ^1.4.4
+        version: 1.4.4
       ds-test:
         specifier: github:dapphub/ds-test
         version: https://codeload.github.com/dapphub/ds-test/tar.gz/e282159d5170298eb2455a6c05280ab5a73a4ef0
@@ -15,13 +21,16 @@ importers:
         version: https://codeload.github.com/foundry-rs/forge-std/tar.gz/e8a047e3f40f13fa37af6fe14e6e06283d9a060e
       frax-standard-solidity:
         specifier: github:FraxFinance/frax-standard-solidity
-        version: https://codeload.github.com/FraxFinance/frax-standard-solidity/tar.gz/65b1f01cef3de014a2d6646ebe0ca0df202cc9e6(ethers@5.7.2)
+        version: https://codeload.github.com/FraxFinance/frax-standard-solidity/tar.gz/65b1f01cef3de014a2d6646ebe0ca0df202cc9e6(ethers@6.13.1)
       fraxtal-contracts:
         specifier: github:FraxFinance/fraxtal-contracts
         version: dev-fraxtal-contracts@https://codeload.github.com/FraxFinance/fraxtal-contracts/tar.gz/d533b607c0d32d10d9a43ada8aa5d6fadf892e8e
       solidity-bytes-utils:
         specifier: github:GNSPS/solidity-bytes-utils
         version: https://codeload.github.com/GNSPS/solidity-bytes-utils/tar.gz/df88556cbbc267b33a787a3a6eaa32fd7247b589
+      tronweb:
+        specifier: ^5.3.2
+        version: 5.3.2
     devDependencies:
       "@openzeppelin/contracts":
         specifier: ^5.0.1
@@ -55,6 +64,10 @@ importers:
         version: 5.3.3
 
 packages:
+  "@adraffy/ens-normalize@1.10.1":
+    resolution:
+      { integrity: sha512-96Z2IP3mYmF1Xg2cDm8f1gWGf/HUVedQ3FMifV4kG/PQ4yEP51xDtRAEfhVNt5f/uzpNkZHwWQuUcu6D6K+Ekw== }
+
   "@ampproject/remapping@2.2.1":
     resolution:
       { integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg== }
@@ -246,6 +259,28 @@ packages:
     resolution:
       { integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ== }
 
+  "@noble/curves@1.2.0":
+    resolution:
+      { integrity: sha512-oYclrNgRaM9SsBUBVbb8M6DTV7ZHRTKugureoYEncY5c65HOmRzvSiTE3y5CYaPYJA/GVkrhXEoF0M3Ya9PMnw== }
+
+  "@noble/curves@1.4.2":
+    resolution:
+      { integrity: sha512-TavHr8qycMChk8UwMld0ZDRvatedkzWfH8IiaeGCfymOP5i0hSCozz9vHOL0nkwk7HRMlFnAiKpS2jrUmSybcw== }
+
+  "@noble/hashes@1.3.2":
+    resolution:
+      { integrity: sha512-MVC8EAQp7MvEcm30KWENFjgR+Mkmf+D189XJTkFIlwohU5hcBbn1ZkKq7KVTi2Hme3PMGF390DaL52beVrIihQ== }
+    engines: { node: ">= 16" }
+
+  "@noble/hashes@1.4.0":
+    resolution:
+      { integrity: sha512-V1JJ1WTRUqHHrOSh597hURcMqVKVGL/ea3kv0gSnEdsEZ0/+VyPghM1lMNGc00z7CIQorSvbKpuJkxvuHbvdbg== }
+    engines: { node: ">= 16" }
+
+  "@noble/secp256k1@2.1.0":
+    resolution:
+      { integrity: sha512-XLEQQNdablO0XZOIniFQimiXsZDNwaYgL96dZwC54Q30imSbAOFf3NKtepc+cXyuZf5Q1HCgbqgZ2UFFuHVcEw== }
+
   "@openzeppelin/contracts-upgradeable@4.7.3":
     resolution:
       { integrity: sha512-+wuegAMaLcZnLCJIvrVUDzA9z/Wp93f0Dla/4jJvIhijRrPabjQbZe6fWiECLaJyfn5ci9fqf9vTw3xpQOad2A== }
@@ -257,6 +292,10 @@ packages:
   "@openzeppelin/contracts@3.4.2":
     resolution:
       { integrity: sha512-z0zMCjyhhp4y7XKAcDAi3Vgms4T2PstwBdahiO0+9NaGICQKjynK3wduSRplTgk4LXmoO1yfDGO5RbjKYxtuxA== }
+
+  "@openzeppelin/contracts@3.4.2-solc-0.7":
+    resolution:
+      { integrity: sha512-W6QmqgkADuFcTLzHL8vVoNBtkwjvQRpYIAom7KiUNoLKghyx3FgH0GBjt8NRvigV1ZmMOBllvE1By1C+bi8WpA== }
 
   "@openzeppelin/contracts@4.3.3":
     resolution:
@@ -285,6 +324,18 @@ packages:
       { commit: 8f9b23f8838670afda0fd8983f2c41e8037ae6bc, repo: git@github.com:rari-capital/solmate.git, type: git }
     version: 7.0.0-alpha.3
 
+  "@scure/base@1.1.7":
+    resolution:
+      { integrity: sha512-PPNYBslrLNNUQ/Yad37MHYsNQtK67EhWb6WtSvNLLPo7SdVZgkUjD6Dg+5On7zNwmskf8OX7I7Nx5oN+MIWE0g== }
+
+  "@scure/bip32@1.4.0":
+    resolution:
+      { integrity: sha512-sVUpc0Vq3tXCkDGYVWGIZTRfnvu8LoTDaev7vbwh0omSvVORONr960MQWdKqJDCReIEmTj3PAr73O3aoxz7OPg== }
+
+  "@scure/bip39@1.3.0":
+    resolution:
+      { integrity: sha512-disdg7gHuTDZtY+ZdkmLpPCk7fxZSu3gBiEGuoC1XYxv9cGx3Z6cpTggCgW6odSOOIXCiDjuGejW+aJKCY/pIQ== }
+
   "@solidity-parser/parser@0.16.2":
     resolution:
       { integrity: sha512-PI9NfoA3P8XK2VBkK5oIfRgKDsicwDZfkVq9ZTBCQYGOP1N2owgY2dyLGyU5/J/hQs8KRk55kdmvTLjy3Mu3vg== }
@@ -292,6 +343,10 @@ packages:
   "@solidity-parser/parser@0.17.0":
     resolution:
       { integrity: sha512-Nko8R0/kUo391jsEHHxrGM07QFdnPGvlmox4rmH0kNiNAashItAilhy4Mv4pK5gQmW5f4sXAF58fwJbmlkGcVw== }
+
+  "@tronweb3/google-protobuf@3.21.2":
+    resolution:
+      { integrity: sha512-IVcT2GfWX3K6tHUVhs14NP5uzKhQt4KeDya1g9ACxuZsUzsaoGUIGzceK2Ltu7xp1YV94AaHOf4yxLAivlvEkQ== }
 
   "@tsconfig/node10@1.0.9":
     resolution:
@@ -321,9 +376,33 @@ packages:
     resolution:
       { integrity: sha512-D5qGUYwjvnNNextdU59/+fI+spnwtTFmyQP0h+PfIOSkNfpU6AOICUOkm4i0OnSk+NyjdPJrxCDro0sJsWlRpQ== }
 
+  "@types/node@18.15.13":
+    resolution:
+      { integrity: sha512-N+0kuo9KgrUQ1Sn/ifDXsvg0TTleP7rIy4zOBGECxAljqvqfqpTfzx0Q1NUedOixRMBfe2Whhb056a42cWs26Q== }
+
   "@types/node@18.19.14":
     resolution:
       { integrity: sha512-EnQ4Us2rmOS64nHDWr0XqAD8DsO6f3XR6lf9UIIrZQpUzPVdN/oPuEzfDWNHSyXLvoGgjuEm/sPwFGSSs35Wtg== }
+
+  "@uniswap/lib@4.0.1-alpha":
+    resolution:
+      { integrity: sha512-f6UIliwBbRsgVLxIaBANF6w09tYqc6Y/qXdsrbEmXHyFA7ILiKrIwRFXe1yOg8M3cksgVsO9N7yuL2DdCGQKBA== }
+    engines: { node: ">=10" }
+
+  "@uniswap/v2-core@1.0.1":
+    resolution:
+      { integrity: sha512-MtybtkUPSyysqLY2U210NBDeCHX+ltHt3oADGdjqoThZaFRDKwM6k1Nb3F0A3hk5hwuQvytFWhrWHOEq6nVJ8Q== }
+    engines: { node: ">=10" }
+
+  "@uniswap/v3-core@1.0.1":
+    resolution:
+      { integrity: sha512-7pVk4hEm00j9tc71Y9+ssYpO6ytkeI0y7WE9P6UcmNzhxPePwyAxImuhVsTqWK9YFvzgtvzJHi64pBl4jUzKMQ== }
+    engines: { node: ">=10" }
+
+  "@uniswap/v3-periphery@1.4.4":
+    resolution:
+      { integrity: sha512-S4+m+wh8HbWSO3DKk4LwUCPZJTpCugIsHrWR86m/OrUyvSqGDTXKFfc2sMuGXCZrD1ZqO3rhQsKgdWg3Hbb2Kw== }
+    engines: { node: ">=10" }
 
   acorn-walk@8.3.2:
     resolution:
@@ -339,6 +418,10 @@ packages:
   aes-js@3.0.0:
     resolution:
       { integrity: sha512-H7wUZRn8WpTq9jocdxQ2c8x2sKo9ZVmzfRE13GiNJXfp7NcKYEdvl3vspKjXox6RIG2VtaRe4JFvxG4rqp2Zuw== }
+
+  aes-js@4.0.0-beta.5:
+    resolution:
+      { integrity: sha512-G965FqalsNyrPqgEGON7nIx1e/OVENSgiEIzyC63haUMuvNnwIgIjMs52hlTCKhkBny7A2ORNlfY9Zu+jmGk1Q== }
 
   ajv@6.12.6:
     resolution:
@@ -412,6 +495,14 @@ packages:
       { integrity: sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ== }
     engines: { node: ">=8" }
 
+  asynckit@0.4.0:
+    resolution:
+      { integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q== }
+
+  axios@1.7.2:
+    resolution:
+      { integrity: sha512-2A8QhOMrbomlDuiLeK9XibIBzuHeRcqqNOHp0Cyp5EoJ1IFDh+XZH3A6BkXtv0K4gFGCI0Y4BM7B1wOEi0Rmgw== }
+
   axobject-query@4.0.0:
     resolution:
       { integrity: sha512-+60uv1hiVFhHZeO+Lz0RYzsVHy5Wr1ayX0mwda9KPDVLNJgZ1T9Ny7VmFbLDzxsH0D87I86vgj3gFrjTJUYznw== }
@@ -420,9 +511,17 @@ packages:
     resolution:
       { integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw== }
 
+  base64-sol@1.0.1:
+    resolution:
+      { integrity: sha512-ld3cCNMeXt4uJXmLZBHFGMvVpK9KsLVEhPpFRXnvSVAqABKbuNZg/+dsq3NuM+wxFLb/UrVkz7m1ciWmkMfTbg== }
+
   bech32@1.1.4:
     resolution:
       { integrity: sha512-s0IrSOzLlbvX7yp4WBfPITzpAU8sqQcpsmwXDiKwrG4r491vwCO/XpejasRNl0piBMe/DvP4Tz0mIS/X1DPJBQ== }
+
+  bignumber.js@9.1.2:
+    resolution:
+      { integrity: sha512-2/mKyZH9K85bzOEfhXDBFZTGd1CTs+5IHpeFQo9luiBG7hghdC851Pj2WAhb6E3R6b9tZj/XKhbg4fum+Kepug== }
 
   bn.js@4.12.0:
     resolution:
@@ -533,6 +632,11 @@ packages:
     resolution:
       { integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w== }
 
+  combined-stream@1.0.8:
+    resolution:
+      { integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg== }
+    engines: { node: ">= 0.8" }
+
   command-exists@1.2.9:
     resolution:
       { integrity: sha512-LTQ/SGc+s0Xc0Fu5WaKnR0YiygZkm9eKFvyS+fRsU7/ZWFF8ykFM6Pc9aCVf1+xasOOZpO3BAVgVrKvsqKHV7w== }
@@ -600,6 +704,11 @@ packages:
       { integrity: sha512-WaEtAOpRA1MQ0eohqZjpGD8zdI0Ovsm8mmFhaDN8dvDZzyoUMcYDnf5Y6iu7HTXxf8JDS23qWa4a+hKCDyOPzw== }
     engines: { node: ">=6" }
 
+  delayed-stream@1.0.0:
+    resolution:
+      { integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ== }
+    engines: { node: ">=0.4.0" }
+
   dequal@2.0.3:
     resolution:
       { integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA== }
@@ -659,9 +768,22 @@ packages:
     resolution:
       { integrity: sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g== }
 
+  ethereum-cryptography@2.2.1:
+    resolution:
+      { integrity: sha512-r/W8lkHSiTLxUxW8Rf3u4HGB0xQweG2RyETjywylKZSzLWoWAijRz8WCuOtJ6wah+avllXBqZuk29HCCvhEIRg== }
+
   ethers@5.7.2:
     resolution:
       { integrity: sha512-wswUsmWo1aOK8rR7DIKiWSw9DbLWe6x98Jrn8wcTflTVvaXhAMaB5zGAXy0GYQEQp9iO1iSHWVyARQm11zUtyg== }
+
+  ethers@6.13.1:
+    resolution:
+      { integrity: sha512-hdJ2HOxg/xx97Lm9HdCWk949BfYqYWpyw4//78SiwOLgASyfrNszfMUNB2joKjvGUdwhHfaiMMFFwacVVoLR9A== }
+    engines: { node: ">=14.0.0" }
+
+  eventemitter3@3.1.2:
+    resolution:
+      { integrity: sha512-tvtQIeLVHjDkJYnzf2dgVMxfuSGJeM/7UCG17TT4EumTfNtF+0nebF/4zWOIkCreAbtNqhGEboB6BWrwqNaw4Q== }
 
   eventemitter3@5.0.1:
     resolution:
@@ -699,6 +821,16 @@ packages:
       debug:
         optional: true
 
+  follow-redirects@1.15.6:
+    resolution:
+      { integrity: sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA== }
+    engines: { node: ">=4.0" }
+    peerDependencies:
+      debug: "*"
+    peerDependenciesMeta:
+      debug:
+        optional: true
+
   forge-std@1.1.2:
     resolution:
       { integrity: sha512-Wfb0iAS9PcfjMKtGpWQw9mXzJxrWD62kJCUqqLcyuI0+VRtJ3j20XembjF3kS20qELYdXft1vD/SPFVWVKMFOw== }
@@ -707,6 +839,11 @@ packages:
     resolution:
       { tarball: https://codeload.github.com/foundry-rs/forge-std/tar.gz/e8a047e3f40f13fa37af6fe14e6e06283d9a060e }
     version: 1.5.6
+
+  form-data@4.0.0:
+    resolution:
+      { integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww== }
+    engines: { node: ">= 6" }
 
   frax-standard-solidity@https://codeload.github.com/FraxFinance/frax-standard-solidity/tar.gz/65b1f01cef3de014a2d6646ebe0ca0df202cc9e6:
     resolution:
@@ -792,6 +929,10 @@ packages:
   inherits@2.0.4:
     resolution:
       { integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ== }
+
+  injectpromise@1.0.0:
+    resolution:
+      { integrity: sha512-qNq5wy4qX4uWHcVFOEU+RqZkoVG65FhvGkyDWbuBxILMjK6A1LFf5A1mgXZkD4nRx5FCorD81X/XvPKp/zVfPA== }
 
   is-arrayish@0.2.1:
     resolution:
@@ -935,6 +1076,16 @@ packages:
     resolution:
       { integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA== }
     engines: { node: ">=8.6" }
+
+  mime-db@1.52.0:
+    resolution:
+      { integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg== }
+    engines: { node: ">= 0.6" }
+
+  mime-types@2.1.35:
+    resolution:
+      { integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw== }
+    engines: { node: ">= 0.6" }
 
   mimic-fn@2.1.0:
     resolution:
@@ -1083,10 +1234,19 @@ packages:
     engines: { node: ">=14" }
     hasBin: true
 
+  proxy-from-env@1.1.0:
+    resolution:
+      { integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg== }
+
   punycode@2.3.1:
     resolution:
       { integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg== }
     engines: { node: ">=6" }
+
+  querystring-es3@0.2.1:
+    resolution:
+      { integrity: sha512-773xhDQnZBMFobEiztv8LIl70ch5MSF/jUQVlhwFyBILqq96anmoctVIYz+ZRp0qbCKATTn6ev02M3r7Ga5vqA== }
+    engines: { node: ">=0.4.x" }
 
   regenerator-runtime@0.14.1:
     resolution:
@@ -1264,6 +1424,10 @@ packages:
     resolution:
       { integrity: sha512-y/mWCZinnvxjTKYhJ+pYxwD0mRLVvOtdS2Awbgxln6iEnt4rk0yBxeSBHkGJcPucRiG0e55mwWp+g/05rsrd6w== }
 
+  tronweb@5.3.2:
+    resolution:
+      { integrity: sha512-iPcIjMCxb6H7FXMntAj47F3L+7jSideyQ7ZOvRj9MeZBh46SHevMrDDR57HzakUa/tT8VvlPFHtqFK4hzTLkXw== }
+
   ts-node@10.9.2:
     resolution:
       { integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ== }
@@ -1278,6 +1442,10 @@ packages:
         optional: true
       "@swc/wasm":
         optional: true
+
+  tslib@2.4.0:
+    resolution:
+      { integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ== }
 
   tslib@2.6.2:
     resolution:
@@ -1324,6 +1492,11 @@ packages:
     resolution:
       { integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg== }
 
+  validator@13.12.0:
+    resolution:
+      { integrity: sha512-c1Q0mCiPlgdTVVVIJIrBuxNicYE+t/7oKeI9MWLj3fh/uq2Pxh/3eeWbVZ4OcGW1TUf53At0njHw5SMdA3tmMg== }
+    engines: { node: ">= 0.10" }
+
   which@2.0.2:
     resolution:
       { integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA== }
@@ -1352,6 +1525,19 @@ packages:
       utf-8-validate:
         optional: true
 
+  ws@8.17.1:
+    resolution:
+      { integrity: sha512-6XQFvXTkbfUOZOKKILFG1PDK2NDQs4azKQl26T0YS5CxqWLgXajbPZ+h4gZekJyRqFU8pvnbAbbs/3TgRPy+GQ== }
+    engines: { node: ">=10.0.0" }
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ">=5.0.2"
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
   yallist@4.0.0:
     resolution:
       { integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A== }
@@ -1367,6 +1553,8 @@ packages:
     engines: { node: ">=6" }
 
 snapshots:
+  "@adraffy/ens-normalize@1.10.1": {}
+
   "@ampproject/remapping@2.2.1":
     dependencies:
       "@jridgewell/gen-mapping": 0.3.3
@@ -1389,9 +1577,9 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.1
 
-  "@chainlink/contracts@0.6.1(ethers@5.7.2)":
+  "@chainlink/contracts@0.6.1(ethers@6.13.1)":
     dependencies:
-      "@eth-optimism/contracts": 0.5.40(ethers@5.7.2)
+      "@eth-optimism/contracts": 0.5.40(ethers@6.13.1)
       "@openzeppelin/contracts": 4.3.3
       "@openzeppelin/contracts-upgradeable": 4.9.5
       "@openzeppelin/contracts-v0.7": "@openzeppelin/contracts@3.4.2"
@@ -1404,12 +1592,12 @@ snapshots:
     dependencies:
       "@jridgewell/trace-mapping": 0.3.9
 
-  "@eth-optimism/contracts@0.5.40(ethers@5.7.2)":
+  "@eth-optimism/contracts@0.5.40(ethers@6.13.1)":
     dependencies:
       "@eth-optimism/core-utils": 0.12.0
       "@ethersproject/abstract-provider": 5.7.0
       "@ethersproject/abstract-signer": 5.7.0
-      ethers: 5.7.2
+      ethers: 6.13.1
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -1713,11 +1901,27 @@ snapshots:
       "@jridgewell/resolve-uri": 3.1.1
       "@jridgewell/sourcemap-codec": 1.4.15
 
+  "@noble/curves@1.2.0":
+    dependencies:
+      "@noble/hashes": 1.3.2
+
+  "@noble/curves@1.4.2":
+    dependencies:
+      "@noble/hashes": 1.4.0
+
+  "@noble/hashes@1.3.2": {}
+
+  "@noble/hashes@1.4.0": {}
+
+  "@noble/secp256k1@2.1.0": {}
+
   "@openzeppelin/contracts-upgradeable@4.7.3": {}
 
   "@openzeppelin/contracts-upgradeable@4.9.5": {}
 
   "@openzeppelin/contracts@3.4.2": {}
+
+  "@openzeppelin/contracts@3.4.2-solc-0.7": {}
 
   "@openzeppelin/contracts@4.3.3": {}
 
@@ -1734,11 +1938,26 @@ snapshots:
   "@rari-capital/solmate@git+https://git@github.com:rari-capital/solmate.git#8f9b23f8838670afda0fd8983f2c41e8037ae6bc":
     {}
 
+  "@scure/base@1.1.7": {}
+
+  "@scure/bip32@1.4.0":
+    dependencies:
+      "@noble/curves": 1.4.2
+      "@noble/hashes": 1.4.0
+      "@scure/base": 1.1.7
+
+  "@scure/bip39@1.3.0":
+    dependencies:
+      "@noble/hashes": 1.4.0
+      "@scure/base": 1.1.7
+
   "@solidity-parser/parser@0.16.2":
     dependencies:
       antlr4ts: 0.5.0-alpha.4
 
   "@solidity-parser/parser@0.17.0": {}
+
+  "@tronweb3/google-protobuf@3.21.2": {}
 
   "@tsconfig/node10@1.0.9": {}
 
@@ -1759,15 +1978,33 @@ snapshots:
     dependencies:
       "@types/node": 18.19.14
 
+  "@types/node@18.15.13": {}
+
   "@types/node@18.19.14":
     dependencies:
       undici-types: 5.26.5
+
+  "@uniswap/lib@4.0.1-alpha": {}
+
+  "@uniswap/v2-core@1.0.1": {}
+
+  "@uniswap/v3-core@1.0.1": {}
+
+  "@uniswap/v3-periphery@1.4.4":
+    dependencies:
+      "@openzeppelin/contracts": 3.4.2-solc-0.7
+      "@uniswap/lib": 4.0.1-alpha
+      "@uniswap/v2-core": 1.0.1
+      "@uniswap/v3-core": 1.0.1
+      base64-sol: 1.0.1
 
   acorn-walk@8.3.2: {}
 
   acorn@8.11.3: {}
 
   aes-js@3.0.0: {}
+
+  aes-js@4.0.0-beta.5: {}
 
   ajv@6.12.6:
     dependencies:
@@ -1819,13 +2056,27 @@ snapshots:
 
   astral-regex@2.0.0: {}
 
+  asynckit@0.4.0: {}
+
+  axios@1.7.2:
+    dependencies:
+      follow-redirects: 1.15.6
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+
   axobject-query@4.0.0:
     dependencies:
       dequal: 2.0.3
 
   balanced-match@1.0.2: {}
 
+  base64-sol@1.0.1: {}
+
   bech32@1.1.4: {}
+
+  bignumber.js@9.1.2: {}
 
   bn.js@4.12.0: {}
 
@@ -1932,6 +2183,10 @@ snapshots:
 
   colorette@2.0.20: {}
 
+  combined-stream@1.0.8:
+    dependencies:
+      delayed-stream: 1.0.0
+
   command-exists@1.2.9: {}
 
   commander@10.0.1: {}
@@ -1979,6 +2234,8 @@ snapshots:
   deep-eql@4.1.3:
     dependencies:
       type-detect: 4.0.8
+
+  delayed-stream@1.0.0: {}
 
   dequal@2.0.3: {}
 
@@ -2033,6 +2290,13 @@ snapshots:
     dependencies:
       "@types/estree": 1.0.5
 
+  ethereum-cryptography@2.2.1:
+    dependencies:
+      "@noble/curves": 1.4.2
+      "@noble/hashes": 1.4.0
+      "@scure/bip32": 1.4.0
+      "@scure/bip39": 1.3.0
+
   ethers@5.7.2:
     dependencies:
       "@ethersproject/abi": 5.7.0
@@ -2069,6 +2333,21 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
+  ethers@6.13.1:
+    dependencies:
+      "@adraffy/ens-normalize": 1.10.1
+      "@noble/curves": 1.2.0
+      "@noble/hashes": 1.3.2
+      "@types/node": 18.15.13
+      aes-js: 4.0.0-beta.5
+      tslib: 2.4.0
+      ws: 8.17.1
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
+  eventemitter3@3.1.2: {}
+
   eventemitter3@5.0.1: {}
 
   execa@7.2.0:
@@ -2095,13 +2374,21 @@ snapshots:
 
   follow-redirects@1.15.5: {}
 
+  follow-redirects@1.15.6: {}
+
   forge-std@1.1.2: {}
 
   forge-std@https://codeload.github.com/foundry-rs/forge-std/tar.gz/e8a047e3f40f13fa37af6fe14e6e06283d9a060e: {}
 
-  frax-standard-solidity@https://codeload.github.com/FraxFinance/frax-standard-solidity/tar.gz/65b1f01cef3de014a2d6646ebe0ca0df202cc9e6(ethers@5.7.2):
+  form-data@4.0.0:
     dependencies:
-      "@chainlink/contracts": 0.6.1(ethers@5.7.2)
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.35
+
+  frax-standard-solidity@https://codeload.github.com/FraxFinance/frax-standard-solidity/tar.gz/65b1f01cef3de014a2d6646ebe0ca0df202cc9e6(ethers@6.13.1):
+    dependencies:
+      "@chainlink/contracts": 0.6.1(ethers@6.13.1)
       "@openzeppelin/contracts": 5.0.1
       "@types/fs-extra": 11.0.4
       "@types/node": 18.19.14
@@ -2191,6 +2478,8 @@ snapshots:
       wrappy: 1.0.2
 
   inherits@2.0.4: {}
+
+  injectpromise@1.0.0: {}
 
   is-arrayish@0.2.1: {}
 
@@ -2300,6 +2589,12 @@ snapshots:
       braces: 3.0.2
       picomatch: 2.3.1
 
+  mime-db@1.52.0: {}
+
+  mime-types@2.1.35:
+    dependencies:
+      mime-db: 1.52.0
+
   mimic-fn@2.1.0: {}
 
   mimic-fn@4.0.0: {}
@@ -2404,7 +2699,11 @@ snapshots:
 
   prettier@3.2.5: {}
 
+  proxy-from-env@1.1.0: {}
+
   punycode@2.3.1: {}
+
+  querystring-es3@0.2.1: {}
 
   regenerator-runtime@0.14.1: {}
 
@@ -2583,6 +2882,26 @@ snapshots:
 
   toml@3.0.0: {}
 
+  tronweb@5.3.2:
+    dependencies:
+      "@babel/runtime": 7.23.9
+      "@ethersproject/abi": 5.7.0
+      "@tronweb3/google-protobuf": 3.21.2
+      axios: 1.7.2
+      bignumber.js: 9.1.2
+      ethereum-cryptography: 2.2.1
+      ethers: 6.13.1
+      eventemitter3: 3.1.2
+      injectpromise: 1.0.0
+      lodash: 4.17.21
+      querystring-es3: 0.2.1
+      semver: 5.7.2
+      validator: 13.12.0
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - utf-8-validate
+
   ts-node@10.9.2(@types/node@18.19.14)(typescript@5.3.3):
     dependencies:
       "@cspotcode/source-map-support": 0.8.1
@@ -2600,6 +2919,8 @@ snapshots:
       typescript: 5.3.3
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
+
+  tslib@2.4.0: {}
 
   tslib@2.6.2: {}
 
@@ -2627,6 +2948,8 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
+  validator@13.12.0: {}
+
   which@2.0.2:
     dependencies:
       isexe: 2.0.0
@@ -2640,6 +2963,8 @@ snapshots:
   wrappy@1.0.2: {}
 
   ws@7.4.6: {}
+
+  ws@8.17.1: {}
 
   yallist@4.0.0: {}
 

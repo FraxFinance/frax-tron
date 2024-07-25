@@ -5,8 +5,8 @@ import { BaseScript } from "frax-std/BaseScript.sol";
 import { console } from "frax-std/FraxTest.sol";
 import { FraxtalL2 } from "src/contracts/chain-constants/FraxtalL2.sol";
 
-import { ERC20WithMinters } from "src/contracts/ERC20WithMinters.sol";
-import { Fraxferry } from "frax-contracts/src/hardhat/contracts/Fraxferry/Fraxferry.sol";
+import { ERC20WithMinters } from "src/contracts/ERC20WithMinters-flattened.sol";
+import { Fraxferry } from "src/contracts/FraxFerry-flattened.sol";
 
 /*
 NOTICE:

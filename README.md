@@ -1,23 +1,27 @@
 # Frax Tron
 
-Good afternoon team,
-I've successfully deployed the FRAX mintable ERC20 with Ferry on Tron.
-
 ## Resources
 - https://tronscan.org
 - https://www.btcschools.net/tron/tron_tool_base58check_hex.php
   - Ignore the "41" at the start when decoding Base58
 
 ## Addresses
+### Solana
 - Deployer / Authorized Minter
   - `TLNe6KF1dUSYBcZ4fzTstoKB8bkzQewz42`
-  - `0x721fc501d1fe305065dc88da0cf90406a79dfd69`
+  - `0x721fC501D1Fe305065dc88DA0cf90406A79dFD69`
 - FRAX Mintable ERC20 (test)
   - `TQZTkTMbkC9923LtVHZcSrdqcW5rVhkZHP`
-  - `0xa00c37011018b4b11cffbbf0305a771d9d4066cf`
+  - `0xA00C37011018b4B11CFFbBF0305A771D9d4066cf`
 - FRAX Ferry
   - `TGxtcNUY9q19FATX3tFxzkmBhQigVDTFJs`
-  - `0x4cb9873f50f69f7a3e4dcd5d2fe94c531623a298`
+  - `0x4Cb9873f50f69f7a3e4dCd5D2Fe94C531623a298`
+
+### Fraxtal
+- Deployer / Ferry owner
+  - `0xb0E1650A9760e0f383174af042091fc544b8356f`
+- FRAX Ferry
+  - `0xa5677a5bF6e8759D3C904d2da85D1318E398cf3A`
 
 ## Optional Setup
 Add:
