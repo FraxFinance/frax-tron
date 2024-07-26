@@ -5,7 +5,7 @@ import { BaseScript } from "frax-std/BaseScript.sol";
 import { console } from "frax-std/FraxTest.sol";
 import { FraxtalL2 } from "src/contracts/chain-constants/FraxtalL2.sol";
 
-import { ERC20WithMinters } from "src/contracts/ERC20WithMinters-flattened.sol";
+import { ERC20PermissionedMint } from "src/contracts/ERC20WithMinters-flattened.sol";
 import { Fraxferry } from "src/contracts/FraxFerry-flattened.sol";
 
 /*
@@ -33,21 +33,21 @@ contract DeployFraxAssetsOnTron is BaseScript {
     }
 
     function deployERC20sWithFerries() public {
-        (frax, fraxFerry) = deployERC20WithFerry({ _remoteToken: FraxtalL2.FRAX, _name: "Frax", _symbol: "FRAX" });
-        (sFrax, sFraxFerry) = deployERC20WithFerry({
+        (frax, fraxFerry) = deployErc20WithFerry({ _remoteToken: FraxtalL2.FRAX, _name: "Frax", _symbol: "FRAX" });
+        (sFrax, sFraxFerry) = deployErc20WithFerry({
             _remoteToken: FraxtalL2.SFRAX,
             _name: "Staked Frax",
             _symbol: "sFRAX"
         });
-        (fxs, fxsFerry) = deployERC20WithFerry({ _remoteToken: FraxtalL2.FXS, _name: "Frax Share", _symbol: "FXS" });
+        (fxs, fxsFerry) = deployErc20WithFerry({ _remoteToken: FraxtalL2.FXS, _name: "Frax Share", _symbol: "FXS" });
     }
 
     function deployErc20WithFerry(
         address _remoteToken,
         string memory _name,
         string memory _symbol
-    ) public returns (address) {
-        ERC20WithMinters erc20 = new ERC20WithMinters({
+    ) public returns (address, address) {
+        ERC20PermissionedMint erc20 = new ERC20PermissionedMint({
             _creator_address: deployer,
             _timelock_address: timelock,
             _name: _name,
@@ -65,5 +65,6 @@ contract DeployFraxAssetsOnTron is BaseScript {
         console.log(address(erc20));
         console.log("Ferry:");
         console.log(address(ferry));
+        return (address(erc20), address(ferry));
     }
 }

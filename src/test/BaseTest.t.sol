@@ -11,6 +11,9 @@ import { FraxtalL2 } from "src/contracts/chain-constants/FraxtalL2.sol";
 import { FraxtalTestnetL1 } from "src/contracts/chain-constants/FraxtalTestnetL1.sol";
 import { FraxtalTestnetL2 } from "src/contracts/chain-constants/FraxtalTestnetL2.sol";
 
+import { ERC20PermissionedMint } from "src/contracts/ERC20WithMinters-flattened.sol";
+import { Fraxferry } from "src/contracts/FraxFerry-flattened.sol";
+
 contract BaseTest is FraxTest {
     Counter public counter;
 
@@ -31,6 +34,22 @@ contract BaseTest is FraxTest {
     address public FRAXSWAP_FACTORY;
     address public FRAXSWAP_ROUTER;
     address public FRAXSWAP_ROUTER_MULTIHOP;
+
+    // test contracts
+    ERC20PermissionedMint public token0;
+    ERC20PermissionedMint public token1;
+    Fraxferry public ferry0To1;
+    Fraxferry public ferry1To0;
+    uint256 public chainIdToken0 = 111;
+    uint256 public chainIdToken1 = 222;
+
+    // test users
+    address public captain = address(0x111111);
+    address public firstOfficer = address(0x222222);
+    address public crewmember = address(0x333333);
+    address public owner = address(0x4444444);
+    address public testerA = address(0x555555);
+    address public testerB = address(0x666666);
 
     constructor() {
         // Setup fraxtal / fraxtal testnet L1 addresses
@@ -67,5 +86,67 @@ contract BaseTest is FraxTest {
             FRAXSWAP_ROUTER = FraxtalTestnetL2.FRAXSWAP_ROUTER;
             FRAXSWAP_ROUTER_MULTIHOP = FraxtalTestnetL2.FRAXSWAP_ROUTER_MULTIHOP;
         }
+    }
+
+    function setUp() public virtual {
+        deployTokens();
+        deployFerriesAndMint();
+    }
+
+    function deployTokens() internal {
+        token0 = deployToken({ _name: "Token 0", _symbol: "T0" });
+        token1 = deployToken({ _name: "Token 1", _symbol: "T1" });
+    }
+
+    function deployToken(string memory _name, string memory _symbol) internal returns (ERC20PermissionedMint token) {
+        token = new ERC20PermissionedMint({
+            _creator_address: owner,
+            _timelock_address: owner,
+            _name: _name,
+            _symbol: _symbol
+        });
+    }
+
+    function deployFerriesAndMint() internal {
+        ferry0To1 = deployFerryAndMint({
+            _tokenFrom: token0,
+            _chainIdFrom: chainIdToken0,
+            _tokenTo: token1,
+            _chainIdTo: chainIdToken1
+        });
+        ferry1To0 = deployFerryAndMint({
+            _tokenFrom: token1,
+            _chainIdFrom: chainIdToken1,
+            _tokenTo: token0,
+            _chainIdTo: chainIdToken0
+        });
+    }
+
+    function deployFerryAndMint(
+        ERC20PermissionedMint _tokenFrom,
+        uint256 _chainIdFrom,
+        ERC20PermissionedMint _tokenTo,
+        uint256 _chainIdTo
+    ) internal returns (Fraxferry ferry) {
+        ferry = new Fraxferry({
+            _token: address(_tokenFrom),
+            _chainid: _chainIdFrom,
+            _targetToken: address(_tokenTo),
+            _targetChain: _chainIdTo
+        });
+
+        vm.startPrank(owner);
+
+        ferry.setCaptain(captain);
+        ferry.setFirstOfficer(firstOfficer);
+        ferry.setCrewmember(crewmember, true);
+
+        _tokenFrom.addMinter(owner);
+        _tokenFrom.minter_mint(owner, 1e24);
+        _tokenFrom.minter_mint(testerA, 1e24);
+        _tokenFrom.minter_mint(testerB, 1e24);
+        _tokenFrom.minter_mint(address(ferry), 1e24);
+
+        vm.stopPrank();
     }
 }
