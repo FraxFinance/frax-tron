@@ -48,8 +48,8 @@ contract BaseTest is FraxTest {
     address public firstOfficer = address(0x222222);
     address public crewmember = address(0x333333);
     address public owner = address(0x4444444);
-    address public testerA = address(0x555555);
-    address public testerB = address(0x666666);
+    address public userA = address(0x555555);
+    address public userB = address(0x666666);
 
     constructor() {
         // Setup fraxtal / fraxtal testnet L1 addresses
@@ -135,18 +135,17 @@ contract BaseTest is FraxTest {
             _targetChain: _chainIdTo
         });
 
-        vm.startPrank(owner);
-
         ferry.setCaptain(captain);
         ferry.setFirstOfficer(firstOfficer);
         ferry.setCrewmember(crewmember, true);
+        ferry.nominateNewOwner(owner);
 
+        vm.startPrank(owner);
         _tokenFrom.addMinter(owner);
         _tokenFrom.minter_mint(owner, 1e24);
-        _tokenFrom.minter_mint(testerA, 1e24);
-        _tokenFrom.minter_mint(testerB, 1e24);
+        _tokenFrom.minter_mint(userA, 1e24);
+        _tokenFrom.minter_mint(userB, 1e24);
         _tokenFrom.minter_mint(address(ferry), 1e24);
-
         vm.stopPrank();
     }
 }
