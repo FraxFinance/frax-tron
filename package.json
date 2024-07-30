@@ -31,9 +31,10 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@noble/secp256k1": "^2.1.0",
+    "@noble/secp256k1": "1.7.1",
     "@uniswap/v3-periphery": "^1.4.4",
     "ds-test": "github:dapphub/ds-test",
+    "ethers": "^6.13.2",
     "forge-std": "github:foundry-rs/forge-std#e8a047e3f40f13fa37af6fe14e6e06283d9a060e",
     "frax-standard-solidity": "github:FraxFinance/frax-standard-solidity",
     "fraxtal-contracts": "github:FraxFinance/fraxtal-contracts",
