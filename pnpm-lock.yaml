@@ -25,9 +25,6 @@ importers:
       frax-standard-solidity:
         specifier: github:FraxFinance/frax-standard-solidity
         version: https://codeload.github.com/FraxFinance/frax-standard-solidity/tar.gz/65b1f01cef3de014a2d6646ebe0ca0df202cc9e6(ethers@6.13.2)
-      fraxtal-contracts:
-        specifier: github:FraxFinance/fraxtal-contracts
-        version: dev-fraxtal-contracts@https://codeload.github.com/FraxFinance/fraxtal-contracts/tar.gz/d533b607c0d32d10d9a43ada8aa5d6fadf892e8e
       solidity-bytes-utils:
         specifier: github:GNSPS/solidity-bytes-utils
         version: https://codeload.github.com/GNSPS/solidity-bytes-utils/tar.gz/df88556cbbc267b33a787a3a6eaa32fd7247b589
@@ -159,14 +156,6 @@ packages:
     resolution:
       { integrity: sha512-qX5WrQfnah1EFnO5zJv1v46a8HW0+E5xuBBDTwMFZLuVTx0tbU2kkx15NqdjxecrLGatQN9FGQKpb1FKdHCt+g== }
 
-  "@ethersproject/hdnode@5.7.0":
-    resolution:
-      { integrity: sha512-OmyYo9EENBPPf4ERhR7oj6uAtUAhYGqOnIS+jE5pTXvdKBS99ikzq1E7Iv0ZQZ5V36Lqx1qZLeak0Ra16qpeOg== }
-
-  "@ethersproject/json-wallets@5.7.0":
-    resolution:
-      { integrity: sha512-8oee5Xgu6+RKgJTkvEMl2wDgSPSAQ9MB/3JYjFV9jlKvcYHUXZC+cQp0njgmxdHkYWn8s6/IqIZYm0YWCjO/0g== }
-
   "@ethersproject/keccak256@5.7.0":
     resolution:
       { integrity: sha512-2UcPboeL/iW+pSg6vZ6ydF8tCnv3Iu/8tUmLLzWWGzxWKFFqOBQFLo6uLUv6BDrLgCDfN28RJ/wtByx+jZ4KBg== }
@@ -178,10 +167,6 @@ packages:
   "@ethersproject/networks@5.7.1":
     resolution:
       { integrity: sha512-n/MufjFYv3yFcUyfhnXotyDlNdFb7onmkSy8aQERi2PjNcnWQ66xXxa3XlS8nCcA8aJKJjIIMNJTC7tu80GwpQ== }
-
-  "@ethersproject/pbkdf2@5.7.0":
-    resolution:
-      { integrity: sha512-oR/dBRZR6GTyaofd86DehG72hY6NpAjhabkhxgr3X2FpJtJuodEl2auADWBZfhDHgVCbu3/H/Ocq2uC6dpNjjw== }
 
   "@ethersproject/properties@5.7.0":
     resolution:
@@ -207,10 +192,6 @@ packages:
     resolution:
       { integrity: sha512-MZdy2nL3wO0u7gkB4nA/pEf8lu1TlFswPNmy8AiYkfKTdO6eXBJyUdmHO/ehm/htHw9K/qF8ujnTyUAD+Ry54Q== }
 
-  "@ethersproject/solidity@5.7.0":
-    resolution:
-      { integrity: sha512-HmabMd2Dt/raavyaGukF4XxizWKhKQ24DoLtdNbBmNKUOPqwjsKQSdV9GQtj9CBEea9DlzETlVER1gYeXXBGaA== }
-
   "@ethersproject/strings@5.7.0":
     resolution:
       { integrity: sha512-/9nu+lj0YswRNSH0NXYqrh8775XNyEdUQAuf3f+SmOrnVewcJ5SBNAjF7lpgehKi4abvNNXyf+HX86czCdJ8Mg== }
@@ -219,21 +200,9 @@ packages:
     resolution:
       { integrity: sha512-kmcNicCp1lp8qanMTC3RIikGgoJ80ztTyvtsFvCYpSCfkjhD0jZ2LOrnbcuxuToLIUYYf+4XwD1rP+B/erDIhQ== }
 
-  "@ethersproject/units@5.7.0":
-    resolution:
-      { integrity: sha512-pD3xLMy3SJu9kG5xDGI7+xhTEmGXlEqXU4OfNapmfnxLVY4EMSSRp7j1k7eezutBPH7RBN/7QPnwR7hzNlEFeg== }
-
-  "@ethersproject/wallet@5.7.0":
-    resolution:
-      { integrity: sha512-MhmXlJXEJFBFVKrDLB4ZdDzxcBxQ3rLyCkhNqVu3CDYvR97E+8r01UgrI+TI99Le+aYm/in/0vp86guJuM7FCA== }
-
   "@ethersproject/web@5.7.1":
     resolution:
       { integrity: sha512-Gueu8lSvyjBWL4cYsWsjh6MtMwM0+H4HvqFPZfB6dV8ctbP9zFAO73VG1cMWae0FLPCtz0peKPpZY8/ugJJX2w== }
-
-  "@ethersproject/wordlists@5.7.0":
-    resolution:
-      { integrity: sha512-S2TFNJNfHWVHNE6cNDjbVlZ6MgE17MIxMbMg2zv3wn+3XSJGosL1m9ZVv3GXCf/2ymSsQ+hRI5IzoMJTG6aoVA== }
 
   "@jridgewell/gen-mapping@0.3.3":
     resolution:
@@ -284,10 +253,6 @@ packages:
     resolution:
       { integrity: sha512-hOUk6AyBFmqVrv7k5WAw/LpszxVbj9gGN4JRkIX52fdFAj1UA61KXmZDvqVEm+pOyec3+fIeZB02LYa/pWOArw== }
 
-  "@openzeppelin/contracts-upgradeable@4.7.3":
-    resolution:
-      { integrity: sha512-+wuegAMaLcZnLCJIvrVUDzA9z/Wp93f0Dla/4jJvIhijRrPabjQbZe6fWiECLaJyfn5ci9fqf9vTw3xpQOad2A== }
-
   "@openzeppelin/contracts-upgradeable@4.9.5":
     resolution:
       { integrity: sha512-f7L1//4sLlflAN7fVzJLoRedrf5Na3Oal5PZfIq55NFcVZ90EpV1q5xOvL4lFvg3MNICSDr2hH0JUBxwlxcoPg== }
@@ -304,14 +269,6 @@ packages:
     resolution:
       { integrity: sha512-tDBopO1c98Yk7Cv/PZlHqrvtVjlgK5R4J6jxLwoO7qxK4xqOiZG+zSkIvGFpPZ0ikc3QOED3plgdqjgNTnBc7g== }
 
-  "@openzeppelin/contracts@4.7.3":
-    resolution:
-      { integrity: sha512-dGRS0agJzu8ybo44pCIf3xBaPQN/65AIXNgK8+4gzKd5kbvlqyxryUYVLJv7fK98Seyd2hDZzVEHSWAh0Bt1Yw== }
-
-  "@openzeppelin/contracts@4.9.3":
-    resolution:
-      { integrity: sha512-He3LieZ1pP2TNt5JbkPA4PNT9WC3gOTOlDcFGJW4Le4QKqwmiNJCRt44APfxMxvq7OugU/cqYuPcSBzOw38DAg== }
-
   "@openzeppelin/contracts@5.0.1":
     resolution:
       { integrity: sha512-yQJaT5HDp9hYOOp4jTYxMsR02gdFZFXhewX5HW9Jo4fsqSVqqyIO/xTHdWDaKX5a3pv1txmf076Lziz+sO7L1w== }
@@ -321,11 +278,6 @@ packages:
       { integrity: sha512-3dcmCyAxIcxy036h1I7MQU/uEEBq8oLwf1CE3xeze+MPlgkdlb/+w6rGR/1dhp6Hqi17fRS6nvwnOzkESxEkOw== }
     peerDependencies:
       prettier: ^3.0.0
-
-  "@rari-capital/solmate@git+https://git@github.com:rari-capital/solmate.git#8f9b23f8838670afda0fd8983f2c41e8037ae6bc":
-    resolution:
-      { commit: 8f9b23f8838670afda0fd8983f2c41e8037ae6bc, repo: git@github.com:rari-capital/solmate.git, type: git }
-    version: 7.0.0-alpha.3
 
   "@scure/base@1.1.7":
     resolution:
@@ -417,10 +369,6 @@ packages:
       { integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg== }
     engines: { node: ">=0.4.0" }
     hasBin: true
-
-  aes-js@3.0.0:
-    resolution:
-      { integrity: sha512-H7wUZRn8WpTq9jocdxQ2c8x2sKo9ZVmzfRE13GiNJXfp7NcKYEdvl3vspKjXox6RIG2VtaRe4JFvxG4rqp2Zuw== }
 
   aes-js@4.0.0-beta.5:
     resolution:
@@ -603,13 +551,6 @@ packages:
       { integrity: sha512-wfOBkjXteqSnI59oPcJkcPl/ZmwvMMOj340qUIY1SKZCv0B9Cf4D4fAucRkIKQmsIuYK3x1rrgU7MeGRruiuiA== }
     engines: { node: ^12.20.0 || ^14.13.1 || >=16.0.0 }
 
-  clones-with-immutable-args@https://codeload.github.com/Saw-mon-and-Natalie/clones-with-immutable-args/tar.gz/105efee1b9127ed7f6fedf139e1fc796ce8791f2:
-    resolution:
-      {
-        tarball: https://codeload.github.com/Saw-mon-and-Natalie/clones-with-immutable-args/tar.gz/105efee1b9127ed7f6fedf139e1fc796ce8791f2,
-      }
-    version: 2.0.0
-
   code-red@1.0.4:
     resolution:
       { integrity: sha512-7qJWqItLA8/VPVlKJlFXU+NBlo/qyfs39aJcuMT/2ere32ZqvF5OSxgdM5xOfJJ7O429gg2HM47y8v9P+9wrNw== }
@@ -717,13 +658,6 @@ packages:
       { integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA== }
     engines: { node: ">=6" }
 
-  dev-fraxtal-contracts@https://codeload.github.com/FraxFinance/fraxtal-contracts/tar.gz/d533b607c0d32d10d9a43ada8aa5d6fadf892e8e:
-    resolution:
-      {
-        tarball: https://codeload.github.com/FraxFinance/fraxtal-contracts/tar.gz/d533b607c0d32d10d9a43ada8aa5d6fadf892e8e,
-      }
-    version: 1.0.0
-
   diff@4.0.2:
     resolution:
       { integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A== }
@@ -732,11 +666,6 @@ packages:
   dot-case@3.0.4:
     resolution:
       { integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w== }
-
-  dotenv@16.4.5:
-    resolution:
-      { integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg== }
-    engines: { node: ">=12" }
 
   ds-test@https://codeload.github.com/dapphub/ds-test/tar.gz/e282159d5170298eb2455a6c05280ab5a73a4ef0:
     resolution: { tarball: https://codeload.github.com/dapphub/ds-test/tar.gz/e282159d5170298eb2455a6c05280ab5a73a4ef0 }
@@ -774,10 +703,6 @@ packages:
   ethereum-cryptography@2.2.1:
     resolution:
       { integrity: sha512-r/W8lkHSiTLxUxW8Rf3u4HGB0xQweG2RyETjywylKZSzLWoWAijRz8WCuOtJ6wah+avllXBqZuk29HCCvhEIRg== }
-
-  ethers@5.7.2:
-    resolution:
-      { integrity: sha512-wswUsmWo1aOK8rR7DIKiWSw9DbLWe6x98Jrn8wcTflTVvaXhAMaB5zGAXy0GYQEQp9iO1iSHWVyARQm11zUtyg== }
 
   ethers@6.13.2:
     resolution:
@@ -1274,10 +1199,6 @@ packages:
     resolution:
       { integrity: sha512-r5a3l5HzYlIC68TpmYKlxWjmOP6wiPJ1vWv2HeLhNsRZMrCkxeqxiHlQ21oXmQ4F3SiryXBHhAD7JZqvOJjFmg== }
 
-  scrypt-js@3.0.1:
-    resolution:
-      { integrity: sha512-cdwTTnqPu0Hyvf5in5asVdZocVDTNRmR7XEcJuIzMjJeSHybHl7vpB66AzwTaIg6CLSbtjcxc8fqcySfnTkccA== }
-
   semver@5.7.2:
     resolution:
       { integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g== }
@@ -1713,37 +1634,6 @@ snapshots:
       "@ethersproject/properties": 5.7.0
       "@ethersproject/strings": 5.7.0
 
-  "@ethersproject/hdnode@5.7.0":
-    dependencies:
-      "@ethersproject/abstract-signer": 5.7.0
-      "@ethersproject/basex": 5.7.0
-      "@ethersproject/bignumber": 5.7.0
-      "@ethersproject/bytes": 5.7.0
-      "@ethersproject/logger": 5.7.0
-      "@ethersproject/pbkdf2": 5.7.0
-      "@ethersproject/properties": 5.7.0
-      "@ethersproject/sha2": 5.7.0
-      "@ethersproject/signing-key": 5.7.0
-      "@ethersproject/strings": 5.7.0
-      "@ethersproject/transactions": 5.7.0
-      "@ethersproject/wordlists": 5.7.0
-
-  "@ethersproject/json-wallets@5.7.0":
-    dependencies:
-      "@ethersproject/abstract-signer": 5.7.0
-      "@ethersproject/address": 5.7.0
-      "@ethersproject/bytes": 5.7.0
-      "@ethersproject/hdnode": 5.7.0
-      "@ethersproject/keccak256": 5.7.0
-      "@ethersproject/logger": 5.7.0
-      "@ethersproject/pbkdf2": 5.7.0
-      "@ethersproject/properties": 5.7.0
-      "@ethersproject/random": 5.7.0
-      "@ethersproject/strings": 5.7.0
-      "@ethersproject/transactions": 5.7.0
-      aes-js: 3.0.0
-      scrypt-js: 3.0.1
-
   "@ethersproject/keccak256@5.7.0":
     dependencies:
       "@ethersproject/bytes": 5.7.0
@@ -1754,11 +1644,6 @@ snapshots:
   "@ethersproject/networks@5.7.1":
     dependencies:
       "@ethersproject/logger": 5.7.0
-
-  "@ethersproject/pbkdf2@5.7.0":
-    dependencies:
-      "@ethersproject/bytes": 5.7.0
-      "@ethersproject/sha2": 5.7.0
 
   "@ethersproject/properties@5.7.0":
     dependencies:
@@ -1815,15 +1700,6 @@ snapshots:
       elliptic: 6.5.4
       hash.js: 1.1.7
 
-  "@ethersproject/solidity@5.7.0":
-    dependencies:
-      "@ethersproject/bignumber": 5.7.0
-      "@ethersproject/bytes": 5.7.0
-      "@ethersproject/keccak256": 5.7.0
-      "@ethersproject/logger": 5.7.0
-      "@ethersproject/sha2": 5.7.0
-      "@ethersproject/strings": 5.7.0
-
   "@ethersproject/strings@5.7.0":
     dependencies:
       "@ethersproject/bytes": 5.7.0
@@ -1842,42 +1718,10 @@ snapshots:
       "@ethersproject/rlp": 5.7.0
       "@ethersproject/signing-key": 5.7.0
 
-  "@ethersproject/units@5.7.0":
-    dependencies:
-      "@ethersproject/bignumber": 5.7.0
-      "@ethersproject/constants": 5.7.0
-      "@ethersproject/logger": 5.7.0
-
-  "@ethersproject/wallet@5.7.0":
-    dependencies:
-      "@ethersproject/abstract-provider": 5.7.0
-      "@ethersproject/abstract-signer": 5.7.0
-      "@ethersproject/address": 5.7.0
-      "@ethersproject/bignumber": 5.7.0
-      "@ethersproject/bytes": 5.7.0
-      "@ethersproject/hash": 5.7.0
-      "@ethersproject/hdnode": 5.7.0
-      "@ethersproject/json-wallets": 5.7.0
-      "@ethersproject/keccak256": 5.7.0
-      "@ethersproject/logger": 5.7.0
-      "@ethersproject/properties": 5.7.0
-      "@ethersproject/random": 5.7.0
-      "@ethersproject/signing-key": 5.7.0
-      "@ethersproject/transactions": 5.7.0
-      "@ethersproject/wordlists": 5.7.0
-
   "@ethersproject/web@5.7.1":
     dependencies:
       "@ethersproject/base64": 5.7.0
       "@ethersproject/bytes": 5.7.0
-      "@ethersproject/logger": 5.7.0
-      "@ethersproject/properties": 5.7.0
-      "@ethersproject/strings": 5.7.0
-
-  "@ethersproject/wordlists@5.7.0":
-    dependencies:
-      "@ethersproject/bytes": 5.7.0
-      "@ethersproject/hash": 5.7.0
       "@ethersproject/logger": 5.7.0
       "@ethersproject/properties": 5.7.0
       "@ethersproject/strings": 5.7.0
@@ -1918,8 +1762,6 @@ snapshots:
 
   "@noble/secp256k1@1.7.1": {}
 
-  "@openzeppelin/contracts-upgradeable@4.7.3": {}
-
   "@openzeppelin/contracts-upgradeable@4.9.5": {}
 
   "@openzeppelin/contracts@3.4.2": {}
@@ -1928,18 +1770,11 @@ snapshots:
 
   "@openzeppelin/contracts@4.3.3": {}
 
-  "@openzeppelin/contracts@4.7.3": {}
-
-  "@openzeppelin/contracts@4.9.3": {}
-
   "@openzeppelin/contracts@5.0.1": {}
 
   "@prettier/sync@0.3.0(prettier@3.2.5)":
     dependencies:
       prettier: 3.2.5
-
-  "@rari-capital/solmate@git+https://git@github.com:rari-capital/solmate.git#8f9b23f8838670afda0fd8983f2c41e8037ae6bc":
-    {}
 
   "@scure/base@1.1.7": {}
 
@@ -2004,8 +1839,6 @@ snapshots:
   acorn-walk@8.3.2: {}
 
   acorn@8.11.3: {}
-
-  aes-js@3.0.0: {}
 
   aes-js@4.0.0-beta.5: {}
 
@@ -2161,9 +1994,6 @@ snapshots:
       slice-ansi: 5.0.0
       string-width: 5.1.2
 
-  clones-with-immutable-args@https://codeload.github.com/Saw-mon-and-Natalie/clones-with-immutable-args/tar.gz/105efee1b9127ed7f6fedf139e1fc796ce8791f2:
-    {}
-
   code-red@1.0.4:
     dependencies:
       "@jridgewell/sourcemap-codec": 1.4.15
@@ -2242,28 +2072,12 @@ snapshots:
 
   dequal@2.0.3: {}
 
-  dev-fraxtal-contracts@https://codeload.github.com/FraxFinance/fraxtal-contracts/tar.gz/d533b607c0d32d10d9a43ada8aa5d6fadf892e8e:
-    dependencies:
-      "@openzeppelin-4/contracts": "@openzeppelin/contracts@4.9.3"
-      "@openzeppelin-5/contracts": "@openzeppelin/contracts@5.0.1"
-      "@openzeppelin/contracts": 4.7.3
-      "@openzeppelin/contracts-upgradeable": 4.7.3
-      "@rari-capital/solmate": git+https://git@github.com:rari-capital/solmate.git#8f9b23f8838670afda0fd8983f2c41e8037ae6bc
-      clones-with-immutable-args: https://codeload.github.com/Saw-mon-and-Natalie/clones-with-immutable-args/tar.gz/105efee1b9127ed7f6fedf139e1fc796ce8791f2
-      dotenv: 16.4.5
-      ethers: 5.7.2
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-
   diff@4.0.2: {}
 
   dot-case@3.0.4:
     dependencies:
       no-case: 3.0.4
       tslib: 2.6.2
-
-  dotenv@16.4.5: {}
 
   ds-test@https://codeload.github.com/dapphub/ds-test/tar.gz/e282159d5170298eb2455a6c05280ab5a73a4ef0: {}
 
@@ -2299,42 +2113,6 @@ snapshots:
       "@noble/hashes": 1.4.0
       "@scure/bip32": 1.4.0
       "@scure/bip39": 1.3.0
-
-  ethers@5.7.2:
-    dependencies:
-      "@ethersproject/abi": 5.7.0
-      "@ethersproject/abstract-provider": 5.7.0
-      "@ethersproject/abstract-signer": 5.7.0
-      "@ethersproject/address": 5.7.0
-      "@ethersproject/base64": 5.7.0
-      "@ethersproject/basex": 5.7.0
-      "@ethersproject/bignumber": 5.7.0
-      "@ethersproject/bytes": 5.7.0
-      "@ethersproject/constants": 5.7.0
-      "@ethersproject/contracts": 5.7.0
-      "@ethersproject/hash": 5.7.0
-      "@ethersproject/hdnode": 5.7.0
-      "@ethersproject/json-wallets": 5.7.0
-      "@ethersproject/keccak256": 5.7.0
-      "@ethersproject/logger": 5.7.0
-      "@ethersproject/networks": 5.7.1
-      "@ethersproject/pbkdf2": 5.7.0
-      "@ethersproject/properties": 5.7.0
-      "@ethersproject/providers": 5.7.2
-      "@ethersproject/random": 5.7.0
-      "@ethersproject/rlp": 5.7.0
-      "@ethersproject/sha2": 5.7.0
-      "@ethersproject/signing-key": 5.7.0
-      "@ethersproject/solidity": 5.7.0
-      "@ethersproject/strings": 5.7.0
-      "@ethersproject/transactions": 5.7.0
-      "@ethersproject/units": 5.7.0
-      "@ethersproject/wallet": 5.7.0
-      "@ethersproject/web": 5.7.1
-      "@ethersproject/wordlists": 5.7.0
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
 
   ethers@6.13.2:
     dependencies:
@@ -2720,8 +2498,6 @@ snapshots:
       signal-exit: 3.0.7
 
   rfdc@1.3.1: {}
-
-  scrypt-js@3.0.1: {}
 
   semver@5.7.2: {}
 

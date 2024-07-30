@@ -37,7 +37,6 @@
     "ethers": "^6.13.2",
     "forge-std": "github:foundry-rs/forge-std#e8a047e3f40f13fa37af6fe14e6e06283d9a060e",
     "frax-standard-solidity": "github:FraxFinance/frax-standard-solidity",
-    "fraxtal-contracts": "github:FraxFinance/fraxtal-contracts",
     "solidity-bytes-utils": "github:GNSPS/solidity-bytes-utils",
     "tronweb": "^5.3.2"
   }
