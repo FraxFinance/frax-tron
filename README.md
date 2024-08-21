@@ -4,14 +4,23 @@
 - https://tronscan.org
 - https://www.btcschools.net/tron/tron_tool_base58check_hex.php
   - Ignore the "41" at the start when decoding Base58
+- [Chain ID](https://github.com/tronprotocol/tips/blob/master/tip-474.md)
+  - 728126428
 
 ## Addresses
 ### Official
 #### Tron
-- FRAX: `TArMTLyihUsuscLtL3hzrFF65r8NbWkW9f`
-- sFRAX: `TDsivFeAJ9pPWJEWvrWotXYiqY85s1EYW4`
-- FXS: `TAJgjCjWSQUzkLfxRWU4q2smEBMGZCeWfL`
+- FRAX:
+  - TRC20: `TArMTLyihUsuscLtL3hzrFF65r8NbWkW9f` / `0x09ac453b58d3ee843675bf0c8b35bff5eda46276`
+  - Ferry (Tron): `TTzFDbwrJ1Rp7kQ4JaiBHKWGxCVEe1TJ7p`
 
+- sFRAX:
+  - TRC20: `TDsivFeAJ9pPWJEWvrWotXYiqY85s1EYW4` / `0x2ad6fb1eaf3702485071c2cb8c634015bebc8b3a`
+  - Ferry (Tron): `TTin8JYkKZte3FPVFixXA5jo2QhZe4jp3p`
+
+- FXS:
+  - TRC20: `TAJgjCjWSQUzkLfxRWU4q2smEBMGZCeWfL` / `0x03af0c5cecfb2d1e78158e6946be8a54a99cc6cc`
+  - Ferry (Tron): `TMtpW4xRFzM45vU2fUpbD3p1GtzobcZYnq`
 
 ### Test
 #### Tron
