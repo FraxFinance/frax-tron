@@ -6,16 +6,21 @@
   - Ignore the "41" at the start when decoding Base58
 
 ## Addresses
-### Solana
+### Official
+#### Tron
+- FRAX: `TArMTLyihUsuscLtL3hzrFF65r8NbWkW9f`
+- sFRAX: `TDsivFeAJ9pPWJEWvrWotXYiqY85s1EYW4`
+- FXS: `TAJgjCjWSQUzkLfxRWU4q2smEBMGZCeWfL`
+
+
+### Test
+#### Tron
 - Deployer / Authorized Minter
   - `TLNe6KF1dUSYBcZ4fzTstoKB8bkzQewz42`
-  - `0x721fC501D1Fe305065dc88DA0cf90406A79dFD69`
 - FRAX Mintable ERC20 (test)
   - `TQZTkTMbkC9923LtVHZcSrdqcW5rVhkZHP`
-  - `0xA00C37011018b4B11CFFbBF0305A771D9d4066cf`
 - FRAX Ferry
   - `TGxtcNUY9q19FATX3tFxzkmBhQigVDTFJs`
-  - `0x4Cb9873f50f69f7a3e4dCd5D2Fe94C531623a298`
 
 ### Fraxtal
 - Deployer / Ferry owner
