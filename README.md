@@ -9,18 +9,27 @@
 
 ## Addresses
 ### Official
-#### Tron
 - FRAX:
-  - TRC20: `TArMTLyihUsuscLtL3hzrFF65r8NbWkW9f` / `0x09ac453b58d3ee843675bf0c8b35bff5eda46276`
+  - TRC20: `TArMTLyihUsuscLtL3hzrFF65r8NbWkW9f` / `0x09Ac453B58d3eE843675bf0C8B35BFf5eDA46276`
   - Ferry (Tron): `TTzFDbwrJ1Rp7kQ4JaiBHKWGxCVEe1TJ7p`
+  - Ferry (Fraxtal): `0xDFb69DaB5F26FbF721E05dEa82aBb9e809AE080B`
 
 - sFRAX:
-  - TRC20: `TDsivFeAJ9pPWJEWvrWotXYiqY85s1EYW4` / `0x2ad6fb1eaf3702485071c2cb8c634015bebc8b3a`
+  - TRC20: `TDsivFeAJ9pPWJEWvrWotXYiqY85s1EYW4` / `0x2AD6FB1eaF3702485071c2cB8C634015BEBC8b3A`
   - Ferry (Tron): `TTin8JYkKZte3FPVFixXA5jo2QhZe4jp3p`
+  - Ferry (Fraxtal): `0x07F6ef67AA9b58f81Aa3aC92f3e7Fd2b93F31efc`
 
 - FXS:
   - TRC20: `TAJgjCjWSQUzkLfxRWU4q2smEBMGZCeWfL` / `0x03af0c5cecfb2d1e78158e6946be8a54a99cc6cc`
   - Ferry (Tron): `TMtpW4xRFzM45vU2fUpbD3p1GtzobcZYnq`
+  - Ferry (Fraxtal): `0x45C55fb1805d8AC7E5Ba0F933cB7D4Da0Dabd365`
+
+#### Fraxtal Ferries
+
+#### Tron Ferries
+
+#### TRC20 Minters
+
 
 ### Test
 #### Tron
