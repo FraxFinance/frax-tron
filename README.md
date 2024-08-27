@@ -24,11 +24,8 @@
   - Ferry (Tron): `TMtpW4xRFzM45vU2fUpbD3p1GtzobcZYnq`
   - Ferry (Fraxtal): `0x45C55fb1805d8AC7E5Ba0F933cB7D4Da0Dabd365`
 
-#### Fraxtal Ferries
-
-#### Tron Ferries
-
-#### TRC20 Minters
+### Multisig / Minter
+- [TNpqBqghn37FLcpWWQVcRAxuBvhUYu2FEB](https://tronscan.org/#/address/TNpqBqghn37FLcpWWQVcRAxuBvhUYu2FEB/permissions?anchorName=anchor_permission_owner&time=1724793291259)
 
 
 ### Test
