@@ -25,7 +25,17 @@
   - Ferry (Fraxtal): `0x45C55fb1805d8AC7E5Ba0F933cB7D4Da0Dabd365`
 
 ### Multisig / Minter
-- [TNpqBqghn37FLcpWWQVcRAxuBvhUYu2FEB](https://tronscan.org/#/address/TNpqBqghn37FLcpWWQVcRAxuBvhUYu2FEB/permissions?anchorName=anchor_permission_owner&time=1724793291259)
+- Tron
+  - [TNpqBqghn37FLcpWWQVcRAxuBvhUYu2FEB](https://tronscan.org/#/address/TNpqBqghn37FLcpWWQVcRAxuBvhUYu2FEB/permissions?anchorName=anchor_permission_owner&time=1724793291259)
+- Fraxtal
+  - [0xC4EB45d80DC1F079045E75D5d55de8eD1c1090E6](https://safe.mainnet.frax.com/home?safe=fraxtal:0xC4EB45d80DC1F079045E75D5d55de8eD1c1090E6)
+
+### Roles
+- Captain / First OFficer / Crewmember
+  - Tron
+    - TRBonCUZRe65gH3mXpLb4vdWGC4ryC99Qc
+  - Fraxtal
+    - 0xBB437059584e30598b3AF0154472E47E6e2a45B9
 
 
 ### Test
